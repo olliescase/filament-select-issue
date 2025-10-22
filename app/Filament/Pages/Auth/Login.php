@@ -38,6 +38,7 @@ class Login extends BasePage
 
         return parent::form($schema)->schema([
             Select::make('test')
+                ->options($options)
                 ->searchable()
                 ->getSearchResultsUsing(
                     function ($search) use ($options) {
